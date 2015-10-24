@@ -14,6 +14,7 @@
 		EB7724C21BD7D80F00C73CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7724C01BD7D80F00C73CEB /* LaunchScreen.storyboard */; };
 		EB7724CD1BD7D80F00C73CEB /* MailboxApp_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7724CC1BD7D80F00C73CEB /* MailboxApp_AssignmentTests.swift */; };
 		EB7724D81BD7D80F00C73CEB /* MailboxApp_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7724D71BD7D80F00C73CEB /* MailboxApp_AssignmentUITests.swift */; };
+		EB7724E61BD7E70100C73CEB /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7724E51BD7E70100C73CEB /* MailboxViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EB7724D31BD7D80F00C73CEB /* MailboxApp AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MailboxApp AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7724D71BD7D80F00C73CEB /* MailboxApp_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxApp_AssignmentUITests.swift; sourceTree = "<group>"; };
 		EB7724D91BD7D80F00C73CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB7724E51BD7E70100C73CEB /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				EB7724BE1BD7D80F00C73CEB /* Assets.xcassets */,
 				EB7724C01BD7D80F00C73CEB /* LaunchScreen.storyboard */,
 				EB7724C31BD7D80F00C73CEB /* Info.plist */,
+				EB7724E51BD7E70100C73CEB /* MailboxViewController.swift */,
 			);
 			path = "MailboxApp Assignment";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				EB7724BA1BD7D80F00C73CEB /* ViewController.swift in Sources */,
 				EB7724B81BD7D80F00C73CEB /* AppDelegate.swift in Sources */,
+				EB7724E61BD7E70100C73CEB /* MailboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
