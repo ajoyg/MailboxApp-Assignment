@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var listImageView: UIImageView!
     
     
+    @IBOutlet weak var inboxScrollView: UIScrollView!
+    
     @IBOutlet weak var laterImageView: UIImageView!
     
     @IBOutlet weak var listIcon: UIImageView!
@@ -61,6 +63,7 @@ class ViewController: UIViewController {
         initmessageUIViewLoc = messageUIView.center
         initinboxUIViewLoc = mailBoxView.center
         OrigBackgroundColor = taskView.backgroundColor
+        inboxScrollView.contentSize = CGSize.init(width: 320, height: 1006)
         
         
     }
@@ -94,8 +97,8 @@ class ViewController: UIViewController {
                 messageUIView.center = CGPoint(x: messageUIView.center.x+translation.x, y: messageUIView.center.y)
             
                 messageOffset = initmessageUIViewLoc.x-messageUIView.center.x
-print("messageOffset: \(messageOffset)")
-            print("Velocity: \(velocity.x)")
+//print("messageOffset: \(messageOffset)")
+  //          print("Velocity: \(velocity.x)")
             
             // Move Left
                 if (velocity.x < 0 && messageOffset > 0) {
@@ -106,9 +109,10 @@ print("messageOffset: \(messageOffset)")
                     }
                     
                     if (messageOffset > 60)  {
-                    //taskView.backgroundColor = UIColor(red: 0, green: 0.3, blue: 0, alpha: 0.5)
+                    //taskView.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0, alpha: 0.8)
+                        taskView.backgroundColor = UIColor(hue: 0.6, saturation: 0.8, brightness: 0.5, alpha: 0.8)
                     taskView.backgroundColor = UIColor.yellowColor()
-                    //taskView.backgroundColor = UIColor(hue: 0.6, saturation: 0.5, brightness: 0.5, alpha: 0.6)
+                    
                         listIcon.alpha=0
                         laterImageView.alpha=1
                     
@@ -121,6 +125,7 @@ print("messageOffset: \(messageOffset)")
                         laterImageView.alpha=0
                         
                     }
+                    
                     
                 }
             
@@ -148,11 +153,10 @@ print("messageOffset: \(messageOffset)")
                         deleteIcon.alpha=1
                     
                     }
-                    print("Frame Width : \(messageUIView.frame.width)")
-                    print("Frame Origin Diff : \(messageUIView.frame.width - messageUIView.frame.origin.x)")
+                //    print("Frame Width : \(messageUIView.frame.width)")
+                //    print("Frame Origin Diff : \(messageUIView.frame.width - messageUIView.frame.origin.x)")
 
                     if (messageUIView.frame.width - messageUIView.frame.origin.x < 36.0) {
-                        print("Here at the 35 right limit")
                         messageUIView.frame.origin = CGPoint(x: messageUIView.frame.width - 35, y: messageUIView.frame.origin.y)
                     }
                 }
@@ -170,7 +174,6 @@ print("messageOffset: \(messageOffset)")
                     actionView.backgroundColor = OrigBackgroundColor
                 }
                 if (messageOffset > -36) {
-                    print("Here reached left drag limit")
                     messageUIView.frame.origin = CGPoint(x: 0.0, y: 0.0)
                 }
                 
@@ -178,8 +181,8 @@ print("messageOffset: \(messageOffset)")
             
 
         } else if sender.state == UIGestureRecognizerState.Ended {
-            print("MessageOffset when ended: \(messageOffset)")
-            print("Velocity when ended : \(velocity.x)")
+        //    print("MessageOffset when ended: \(messageOffset)")
+        //    print("Velocity when ended : \(velocity.x)")
             
             // Move left ended
             if (velocity.x < 0 && messageOffset > 0) {
@@ -227,8 +230,7 @@ print("messageOffset: \(messageOffset)")
            // Move left ended after a right move
             if (velocity.x < 0 && messageOffset < 0) {
                 if (messageOffset > -36) {
-                    print("Here reached left drag limit")
-                    messageUIView.frame.origin = CGPoint(x: 0.0, y: 0.0)
+                    messageUIView.center = initmessageUIViewLoc
                 }
             }
             

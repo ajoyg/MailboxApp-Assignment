@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -75,21 +75,23 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 <state key="normal" image="mail_nav_icon"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="KWx-hN-sko" userLabel="Later Button">
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KWx-hN-sko" userLabel="Later Button">
                                                 <rect key="frame" x="98" y="26" width="31" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                                 </accessibility>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                                <state key="normal" image="later_nav_icon"/>
+                                                <state key="normal" image="later_nav_icon">
+                                                    <color key="titleShadowColor" red="0.53753665819999996" green="0.75349452459999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EpE-yx-5zH">
                                         <rect key="frame" x="0.0" y="139" width="320" height="1006"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="ZQE-5y-SQy" userLabel="Action View">
                                                 <rect key="frame" x="2" y="-9" width="319" height="103"/>
@@ -154,6 +156,7 @@
                         <outlet property="actionView" destination="ZQE-5y-SQy" id="gUW-ix-lid"/>
                         <outlet property="archiveIcon" destination="7Jx-1E-IIB" id="HdH-95-awp"/>
                         <outlet property="deleteIcon" destination="5Ep-D1-jXA" id="dSK-j3-xW5"/>
+                        <outlet property="inboxScrollView" destination="EpE-yx-5zH" id="biO-tA-qXA"/>
                         <outlet property="laterImageView" destination="g6G-y7-ZaO" id="aLJ-kj-MfU"/>
                         <outlet property="listIcon" destination="6qm-2n-w5O" id="LjN-8g-yfW"/>
                         <outlet property="listImageView" destination="ucz-OB-vnU" id="UKL-bn-2x9"/>
