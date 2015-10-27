@@ -12,6 +12,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="menu" id="mqR-ug-eiD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dhh-mb-KSP" appends="YES" id="19Q-QR-Kn3"/>
+                                </connections>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="list" id="ucz-OB-vnU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -20,12 +28,12 @@
                                     <outletCollection property="gestureRecognizers" destination="b01-XF-tmg" appends="YES" id="de5-2p-8EN"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reschedule" id="YZL-I1-W5w">
+                            <imageView alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reschedule" id="YZL-I1-W5w">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Y5R-G6-MBE" appends="YES" id="8gk-kp-q3n"/>
+                                    <outletCollection property="gestureRecognizers" destination="jBU-4h-zw7" appends="YES" id="HQF-Ts-ywi"/>
                                 </connections>
                             </imageView>
                             <view contentMode="scaleToFill" id="nsB-fo-Mbl" userLabel="MailboxView">
@@ -36,10 +44,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="Six-dQ-Ldo">
-                                                <rect key="frame" x="-1" y="-1" width="320" height="65"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                            </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="help_label" id="TxW-Gw-VD7">
                                                 <rect key="frame" x="0.0" y="61" width="320" height="37"/>
                                                 <autoresizingMask key="autoresizingMask"/>
@@ -48,6 +52,38 @@
                                                 <rect key="frame" x="-1" y="95" width="320" height="42"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="Six-dQ-Ldo">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="wJS-7h-qZO" userLabel="Archive Button">
+                                                <rect key="frame" x="198" y="27" width="31" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" image="archive_nav_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="uf4-hH-TMA" userLabel="Mail Button">
+                                                <rect key="frame" x="145" y="26" width="31" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.53753665819999996" green="0.75349452459999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" image="mail_nav_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="KWx-hN-sko" userLabel="Later Button">
+                                                <rect key="frame" x="98" y="26" width="31" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" image="later_nav_icon"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -55,6 +91,21 @@
                                         <rect key="frame" x="0.0" y="139" width="320" height="1006"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" id="ZQE-5y-SQy" userLabel="Action View">
+                                                <rect key="frame" x="2" y="-9" width="319" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="archive_icon" id="7Jx-1E-IIB">
+                                                        <rect key="frame" x="28" y="46" width="25" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="delete_icon" id="5Ep-D1-jXA">
+                                                        <rect key="frame" x="243" y="46" width="25" height="25"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                             <view contentMode="scaleToFill" id="JdW-o6-mWQ" userLabel="Task View">
                                                 <rect key="frame" x="0.0" y="-4" width="320" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,10 +151,14 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1500"/>
                     <connections>
+                        <outlet property="actionView" destination="ZQE-5y-SQy" id="gUW-ix-lid"/>
+                        <outlet property="archiveIcon" destination="7Jx-1E-IIB" id="HdH-95-awp"/>
+                        <outlet property="deleteIcon" destination="5Ep-D1-jXA" id="dSK-j3-xW5"/>
                         <outlet property="laterImageView" destination="g6G-y7-ZaO" id="aLJ-kj-MfU"/>
                         <outlet property="listIcon" destination="6qm-2n-w5O" id="LjN-8g-yfW"/>
                         <outlet property="listImageView" destination="ucz-OB-vnU" id="UKL-bn-2x9"/>
                         <outlet property="mailBoxView" destination="nsB-fo-Mbl" id="kvh-8r-LA6"/>
+                        <outlet property="menuImageView" destination="mqR-ug-eiD" id="U0r-6x-vpW"/>
                         <outlet property="messageUIView" destination="0dR-tt-ypp" id="lkb-xW-urQ"/>
                         <outlet property="messageView" destination="k5O-R2-xVq" id="oOt-QA-3fm"/>
                         <outlet property="rescheduleImageView" destination="YZL-I1-W5w" id="leW-4A-WBQ"/>
@@ -121,9 +176,14 @@
                         <action selector="onTapListView:" destination="BYZ-38-t0r" id="BFs-ub-dld"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Y5R-G6-MBE">
+                <tapGestureRecognizer id="jBU-4h-zw7">
                     <connections>
-                        <action selector="onTapRescheduleView:" destination="BYZ-38-t0r" id="Era-zC-WZq"/>
+                        <action selector="onTapListView:" destination="BYZ-38-t0r" id="Dbc-Ag-7H8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dhh-mb-KSP" userLabel="menu Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="onTapListView:" destination="BYZ-38-t0r" id="VhL-b3-hEp"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -131,11 +191,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="archive_icon" width="25" height="25"/>
+        <image name="archive_nav_icon" width="25" height="20"/>
+        <image name="delete_icon" width="25" height="25"/>
         <image name="feed" width="320" height="1202"/>
         <image name="help_label" width="320" height="37"/>
         <image name="later_icon" width="25" height="25"/>
+        <image name="later_nav_icon" width="25" height="20"/>
         <image name="list" width="320" height="568"/>
         <image name="list_icon" width="25" height="25"/>
+        <image name="mail_nav_icon" width="25" height="20"/>
+        <image name="menu" width="320" height="568"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
         <image name="reschedule" width="320" height="568"/>
